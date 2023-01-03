@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../contexts/Context';
 
 const Protect = ({ children }) => {
@@ -12,8 +12,7 @@ const Protect = ({ children }) => {
     return (
         <Navigate to='/login' state={{ from: location }}
             replace>
-
-        </Navigate >
+        </Navigate>
     );
 };
 
